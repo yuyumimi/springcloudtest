@@ -10,6 +10,10 @@
     <module>../eureka-service</module>
     <module>../eureka-server</module>
     <module>../eureka-service-consumer</module>
+    
+    <module>../microsoft-config-server</module>
+	<module>../microsoft-config-client</module>
+
   </modules>
 
   <properties>

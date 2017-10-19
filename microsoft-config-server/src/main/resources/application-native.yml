@@ -1,0 +1,12 @@
+server:
+  port: 8088
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:E:\\config     #http://localhost:8088/config-client-dev.properties
+  profiles:
+    active: native
+  application:
+    name: spring-cloud-config-server

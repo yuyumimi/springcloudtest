@@ -12,4 +12,3 @@ server:
 spring:
    application:
      name: consumer-hi
-  

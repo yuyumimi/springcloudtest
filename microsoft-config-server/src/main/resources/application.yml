@@ -1,0 +1,15 @@
+server:
+  port: 8088
+spring:
+  cloud:
+    config:               
+      server:
+        svn:
+          uri: http://172.20.65.241/sior/config   #svn路径http://172.20.65.241/sior/config/trunk/cloud-config-dev.properties
+          username: yuyang
+          password: yuyang
+          default-label: trunk
+  profiles:
+    active: subversion
+  application:
+    name: spring-cloud-config-server

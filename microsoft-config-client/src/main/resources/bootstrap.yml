@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:               
+      name: cloud-config,abc         #配置中心应用名
+      profile: product             #指定配置生效环境  
+      enabled: true              #是否使用远程集中配置
+      uri: http://localhost:8088
+  application:
+    name: cloud-config
