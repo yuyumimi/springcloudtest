@@ -12,6 +12,7 @@
         <module>eureka-server</module>
         <module>eureka-service</module>
         <module>eureka-service-consumer</module>
+        <module>springcloud-bus-service</module>
     </modules>
 
     <properties>
