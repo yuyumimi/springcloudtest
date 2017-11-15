@@ -1,21 +1,8 @@
 spring:
    application:
-     name: service-bus
-   rabbitmq:
-     host: localhost
-     port: 5672
-#     username:
-#     password:
-#     virtual-host: /dev_udf-sample
-     template:
-       retry:
-         enabled: true                #发送方是否重试
-     listener:
-       simple:
-         retry:
-           enabled: true               #消费方是否重试
+     name: sior-pay
 server:
-  port: 10000
+  port: 8080
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值
@@ -26,3 +13,9 @@ eureka:
       defaultZone: http://user:password123@localhost:8761/eureka/
     healthcheck:
       enabled: true                           # 开启健康检查（依赖spring-boot-starter-actuator）
+endpoints:
+  shutdown:
+    enabled: true
+management:
+  security:
+    enabled: false

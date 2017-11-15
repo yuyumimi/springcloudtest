@@ -15,6 +15,11 @@ public class BusController {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
+    /**
+     * 接收消息
+     * http://localhost:10000/msg
+     * @return
+     */
     @RequestMapping(value = "/msg",method = RequestMethod.GET)
     public String receiveMessage(){
         Message s=this.amqpTemplate.receive("queue");
@@ -23,6 +28,11 @@ public class BusController {
         return "Receive :"+new String(s.getBody());
     }
 
+    /**
+     * 发送消息
+     * http://localhost:10000/send/消息内容
+     * @param msg
+     */
     @RequestMapping(value = "/send/{msg}",method = RequestMethod.GET)
     public void sendMessage(@PathVariable("msg") String msg){
         this.amqpTemplate.convertAndSend("queue",msg);

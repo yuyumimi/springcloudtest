@@ -13,6 +13,8 @@
         <module>eureka-service</module>
         <module>eureka-service-consumer</module>
         <module>springcloud-bus-service</module>
+        <module>siorpay</module>
+        <module>eureka-gateway-zuul</module>
     </modules>
 
     <properties>

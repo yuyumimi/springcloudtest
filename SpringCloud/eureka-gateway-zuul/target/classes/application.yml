@@ -1,8 +1,8 @@
 spring:
    application:
-     name: service-hi
+     name: eureka-gateway-zuul
 server:
-  port: 9000
+  port: 9999
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值
@@ -19,3 +19,6 @@ endpoints:
 management:
   security:
     enabled: false
+zuul:
+  routes:
+    service-hi: /say-hi/**                     #把service-hi名称映射为/say-hi
