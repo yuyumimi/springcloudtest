@@ -1,0 +1,10 @@
+spring:
+   datasource:
+     url: jdbc:oracle:thin:@172.20.65.236:1521:bjrac
+     username: sior
+     password: sior
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+   jpa:
+     hibernate:
+       ddl-auto: update
+     show-sql: true
