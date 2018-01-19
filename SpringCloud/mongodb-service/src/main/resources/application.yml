@@ -1,0 +1,24 @@
+spring:
+   application:
+     name: service-mongodb
+   profiles:
+     active: mongodb
+
+server:
+  port: 9100
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值
+    lease-expiration-duration-in-seconds: 10  # 发呆时间，即服务续约到期时间（缺省为90s）
+    prefer-ip-address: true                   # 显示ip
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+    healthcheck:
+      enabled: true                           # 开启健康检查（依赖spring-boot-starter-actuator）
+endpoints:
+  shutdown:
+    enabled: true
+management:
+  security:
+    enabled: false
