@@ -2,7 +2,7 @@ spring:
    application:
      name: service-hi
    profiles:
-     active: a
+     active: oracle,b
 
 server:
   port: 9000

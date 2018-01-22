@@ -3,10 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringCloud.iml" filepath="$PROJECT_DIR$/SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-frame/basic-frame.iml" filepath="$PROJECT_DIR$/basic-frame/basic-frame.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-gateway-zuul/eureka-gateway-zuul.iml" filepath="$PROJECT_DIR$/eureka-gateway-zuul/eureka-gateway-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-service-consumer/eureka-service-consumer.iml" filepath="$PROJECT_DIR$/eureka-service-consumer/eureka-service-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mongodb-service/mongodb-service.iml" filepath="$PROJECT_DIR$/mongodb-service/mongodb-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/siorpay/siorpay.iml" filepath="$PROJECT_DIR$/siorpay/siorpay.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-bus-service/springcloud-bus-service.iml" filepath="$PROJECT_DIR$/springcloud-bus-service/springcloud-bus-service.iml" />
     </modules>

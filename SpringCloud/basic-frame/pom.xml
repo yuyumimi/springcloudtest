@@ -39,6 +39,11 @@
             <artifactId>jdbc</artifactId>
             <version>10.2.0.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
     </dependencies>
 
     <build>

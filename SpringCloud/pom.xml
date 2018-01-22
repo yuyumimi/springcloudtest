@@ -15,6 +15,9 @@
         <module>springcloud-bus-service</module>
         <module>siorpay</module>
         <module>eureka-gateway-zuul</module>
+        <module>basic-frame</module>
+        <module>mongodb-service</module>
+
     </modules>
 
     <properties>
@@ -29,7 +32,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.7.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
     <dependencyManagement>
         <dependencies>
