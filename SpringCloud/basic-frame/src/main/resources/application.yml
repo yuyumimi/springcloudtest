@@ -2,7 +2,7 @@ spring:
    application:
      name: service-hi
    profiles:
-     active: oracle,b
+     active: oracle,thyeleaf,druid
 
 server:
   port: 9000

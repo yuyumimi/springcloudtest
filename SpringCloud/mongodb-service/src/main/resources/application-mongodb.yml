@@ -2,3 +2,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://dev:dev@127.0.0.1:27017/test
+  http:
+    multipart:
+      max-request-size: 50Mb
+      max-file-size: 50Mb

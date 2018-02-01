@@ -15,7 +15,7 @@ spring:
          retry:
            enabled: true               #消费方是否重试
 server:
-  port: 10000
+  port: 9999
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值

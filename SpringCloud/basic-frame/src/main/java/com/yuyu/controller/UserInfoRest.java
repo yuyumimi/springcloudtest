@@ -4,18 +4,17 @@ import com.yuyu.bo.UserInfo;
 import com.yuyu.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @RestController
 public class UserInfoRest {
 
     @Autowired
     private UserRepository userRepository;
-    @Value("${custom.paramter.name}")
-    private String name;
 
     @RequestMapping(value = "/userinfo",method = RequestMethod.POST)
     public void userInfoSave(UserInfo user){
@@ -28,5 +27,24 @@ public class UserInfoRest {
         UserInfo user= this.userRepository.findUserById(id);
         if(user!=null)
         this.userRepository.delete(user);
+    }
+
+    @RequestMapping(value = "/userinfo",method = RequestMethod.GET)
+    public ModelAndView getUser(){
+        List<UserInfo> users= this.userRepository.findAll();
+        ModelAndView model=new ModelAndView();
+        model.setViewName("user");
+        model.getModel().put("users",users);
+        return model;
+    }
+
+    @RequestMapping(value = "/home",method = RequestMethod.GET)
+    public ModelAndView toHome(){
+        List<UserInfo> users= this.userRepository.findAll();
+        ModelAndView model=new ModelAndView();
+        model.setViewName("index");
+        model.getModel().put("users",users);
+        model.getModel().put("host1","localhost");
+        return model;
     }
 }

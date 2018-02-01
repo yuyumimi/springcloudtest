@@ -1,5 +1,6 @@
 package com.yuyu;
 
+import com.yuyu.filter.PreRequestLogFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -16,8 +17,14 @@ public class ZuulServiceApp {
 
     @Bean
     public PatternServiceRouteMapper serviceRouteMapper() {
+        //应用名为spring.application.name: consumer-hi-v1， 将映射为/v1/consumer-hi/**
         return new PatternServiceRouteMapper(
                 "(?<name>^.+)-(?<version>v.+$)",
                 "${version}/${name}");
+    }
+
+    @Bean
+    public PreRequestLogFilter preRequestLogFilter() {
+        return new PreRequestLogFilter();
     }
 }

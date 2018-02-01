@@ -1,6 +1,6 @@
 spring:
    application:
-     name: service-hi
+     name: service-test
 server:
   port: 9000
 eureka:

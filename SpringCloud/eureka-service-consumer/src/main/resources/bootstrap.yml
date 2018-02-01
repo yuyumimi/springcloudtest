@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+      config:
+        username: user
+        password: password123
+        profile: dev
+        label: master
+        name: config          #文件名称-前面的名称（config-client-dev.properties）
+        discovery:
+          enabled: true                                  # 表示使用服务发现组件中的Config Server，而不自己指定Config Server的uri，默认false
+          service-id: service-config  # 指定Config Server在服务发现中的serviceId，默认是configserver
+eureka:
+  client:
+      serviceUrl:
+        defaultZone: http://user:password123@localhost:8761/eureka/      #写在bootstrap里面，否则报错找不到server

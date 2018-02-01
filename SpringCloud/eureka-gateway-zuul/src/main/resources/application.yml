@@ -1,6 +1,8 @@
 spring:
-   application:
-     name: eureka-gateway-zuul
+  application:
+    name: eureka-gateway-zuul
+  profiles:
+    active: pattern
 server:
   port: 9999
 eureka:
@@ -19,7 +21,14 @@ endpoints:
 management:
   security:
     enabled: false
-zuul:
-  ignored-services: '*'                         #屏蔽配置的服务，只代理routes配置的服务或者配置多个服务名称，用，隔开
-  routes:
-    service-hi: /say-hi/**                       #把service-hi名称映射为/say-hi
+#download config
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000

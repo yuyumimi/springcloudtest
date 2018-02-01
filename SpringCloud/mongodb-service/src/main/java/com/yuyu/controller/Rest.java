@@ -9,6 +9,8 @@ import com.mongodb.gridfs.GridFSInputFile;
 import com.yuyu.bo.UserInfo;
 import com.yuyu.dao.UserMongoRepository;
 import com.yuyu.utils.MD5CaculateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.repository.query.Param;
@@ -26,6 +28,8 @@ import java.security.NoSuchAlgorithmException;
 
 @RestController
 public class Rest {
+
+    private static final Logger logger = LoggerFactory.getLogger(Rest.class);
     @Autowired
     private MongoTemplate mongoTemplate;
 
@@ -62,10 +66,10 @@ public class Rest {
 
             test(gridFSDBFile);
 
-            if (gridFSDBFile != null)
+            if (gridFSDBFile != null) {
+                logger.info(filename+" already exists in the database!");
                 return;
-
-
+            }
             GridFSInputFile gfFile = gridFS.createFile(inputStream);
             gfFile.setFilename(filename);
 //            gfFile.setId(md5Id);
@@ -91,6 +95,8 @@ public class Rest {
 //        file.transferTo(new File("e:/tmp/"+ file.getOriginalFilename()));
     }
     private void test(GridFSDBFile gridFSDBFile) throws IOException {
+        if(gridFSDBFile==null)
+            return;
         System.out.println("获取文件MIME类型="+gridFSDBFile.getContentType());
         System.out.println("getFilename="+gridFSDBFile.getFilename());
         System.out.println("getAliases="+gridFSDBFile.getAliases());

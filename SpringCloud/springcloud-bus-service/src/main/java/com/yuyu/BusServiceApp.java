@@ -6,6 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Hello world!
+ * http://localhost:15672访问rabbitmq管理页面
  */
 @SpringBootApplication
 @EnableDiscoveryClient
