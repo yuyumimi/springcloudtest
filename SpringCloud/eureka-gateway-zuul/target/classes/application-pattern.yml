@@ -1,7 +1,0 @@
-zuul:
-  ignored-services: '*'                         #屏蔽配置的服务，只代理routes配置的服务或者配置多个服务名称，用，隔开
-  routes:
-    service-test: /API/**                       #把service-test名称映射为/API
-  PreRequestLogFilter:
-    pre:
-      disable: true

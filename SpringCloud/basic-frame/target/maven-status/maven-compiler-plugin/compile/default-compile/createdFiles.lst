@@ -1,5 +1,0 @@
-com\yuyu\dao\UserRepository.class
-com\yuyu\BasicFramServiceApp.class
-com\yuyu\controller\UserInfoRest.class
-com\yuyu\bo\UserInfo.class
-com\yuyu\utils\MD5CaculateUtil.class

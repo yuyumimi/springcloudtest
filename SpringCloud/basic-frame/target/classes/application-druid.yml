@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    druid:
-      filter: stat, wall, log4j
-      stat-view-servlet:
-        enabled: true
-        login-username: druid
-        login-password: druid
