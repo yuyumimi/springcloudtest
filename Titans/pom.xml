@@ -8,11 +8,13 @@
     <artifactId>titans</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-	<name>com.myth.titans</name>
+	<name>Titans</name>
 	<description>Product project for spring cloud</description>
 
 	
     <modules>
+        <module>Uranus</module>
+        <module>Gaia</module>
     </modules>
 
     <properties>
@@ -57,6 +59,7 @@
     </dependencyManagement>
 
 	<dependencies>
+        <!-- spring 开启健康检查 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>

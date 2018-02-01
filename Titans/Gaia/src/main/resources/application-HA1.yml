@@ -1,0 +1,24 @@
+server:
+  port: 9001
+logging:
+  level:
+    root: WARN
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password123
+eureka:
+  environment: product
+  datacenter: cloud
+  instance:
+    hostname: Gaia-HA-1
+  server:
+    enable-self-preservation: false           # 关闭自我保护模式（缺省为打开）
+    eviction-interval-timer-in-ms: 5000       # 续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+  client:
+    registerWithEureka: false                 # false当前是注册中心，不注册自己（默认为客户端）
+    fetchRegistry: false                      # false 注册中心职责是维护服务实例，不需要检索服务（默认为客户端）
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@Gaia-HA-2:9002/eureka/
