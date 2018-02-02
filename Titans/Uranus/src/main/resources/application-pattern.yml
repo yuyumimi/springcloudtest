@@ -1,7 +1,15 @@
 zuul:
   ignored-services: '*'                         #屏蔽配置的服务，只代理routes配置的服务或者配置多个服务名称，用，隔开
   routes:
-    service-test: /API/**                       #把service-test名称映射为/API
+    mobileMsgService-V1: /api/V1/mobileMsgService/**                       #把service-test名称映射为/API
+  #disable PreRequestLogFilter过滤器
   PreRequestLogFilter:
     pre:
-      disable: true
+      disable: false
+#  全局设置：
+#sensitive-headers: true
+#指定路由设置：
+#zuul.routes.<routeName>.sensitive-headers=
+#zuul.routes.<routeName>.custom-sensitive-headers=true
+#重定向问题Host头信息的处理,url
+#zuul.add-host-header=true

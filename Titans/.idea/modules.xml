@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Gaia/Gaia.iml" filepath="$PROJECT_DIR$/Gaia/Gaia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Uranus/Uranus.iml" filepath="$PROJECT_DIR$/Uranus/Uranus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" filepath="$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/titans.iml" filepath="$PROJECT_DIR$/titans.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Uranus/uranus.iml" filepath="$PROJECT_DIR$/Uranus/uranus.iml" />
     </modules>
   </component>
 </project>

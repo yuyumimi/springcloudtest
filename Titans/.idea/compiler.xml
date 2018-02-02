@@ -7,13 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Gaia" />
+        <module name="mobile-message-service" />
+        <module name="Uranus" />
         <module name="uranus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Gaia" target="1.8" />
-      <module name="titans" target="1.8" />
+      <module name="mobile-message-service" target="1.8" />
+      <module name="titans" target="1.6" />
       <module name="uranus" target="1.8" />
+      <module name="Uranus" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

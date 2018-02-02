@@ -15,6 +15,7 @@
     <modules>
         <module>Uranus</module>
         <module>Gaia</module>
+        <module>mobile-message-service</module>
     </modules>
 
     <properties>

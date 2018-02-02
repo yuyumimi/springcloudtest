@@ -15,7 +15,7 @@ public class ZuulServiceApp {
         SpringApplication.run(ZuulServiceApp.class,args);
     }
 
-    @Bean
+//    @Bean
     public PatternServiceRouteMapper serviceRouteMapper() {
         //应用名为spring.application.name: consumer-hi-v1， 将映射为/v1/consumer-hi/**
         return new PatternServiceRouteMapper(
