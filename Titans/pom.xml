@@ -16,6 +16,8 @@
         <module>Uranus</module>
         <module>Gaia</module>
         <module>mobile-message-service</module>
+        <module>Oceanus</module>
+        <module>Tethys</module>
     </modules>
 
     <properties>
