@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cronus/Cronus.iml" filepath="$PROJECT_DIR$/Cronus/Cronus.iml" />
       <module fileurl="file://$PROJECT_DIR$/Gaia/Gaia.iml" filepath="$PROJECT_DIR$/Gaia/Gaia.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oceanus/Oceanus.iml" filepath="$PROJECT_DIR$/Oceanus/Oceanus.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tethys/Tethys.iml" filepath="$PROJECT_DIR$/Tethys/Tethys.iml" />
       <module fileurl="file://$PROJECT_DIR$/Titans.iml" filepath="$PROJECT_DIR$/Titans.iml" />
       <module fileurl="file://$PROJECT_DIR$/Uranus/Uranus.iml" filepath="$PROJECT_DIR$/Uranus/Uranus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" filepath="$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" filepath="$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-front-end/web-front-end.iml" filepath="$PROJECT_DIR$/web-front-end/web-front-end.iml" />
     </modules>
   </component>
 </project>

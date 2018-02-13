@@ -1,30 +1,25 @@
-#spring:
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
-#  cloud:
-#      config:
-#        username: user
-#        password: password123
-#        profile: dev
-#        label: master
-#        name: config          #文件名称-前面的名称（config-client-dev.properties）
-#        discovery:
-#          enabled: true                                  # 表示使用服务发现组件中的Config Server，而不自己指定Config Server的uri，默认false
-#          service-id: service-config  # 指定Config Server在服务发现中的serviceId，默认是configserver
 spring:
-  application:
-    name: mobileMsgService-V1
-    version: 1.0
-server:
-  port: 9001
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      profile: pro,data
+      label: master
+      name: neo-config,app
+      discovery:
+        enabled: true
+        service-id: Cronus-config-service-V1
+      fail-fast: true
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值
+    lease-expiration-duration-in-seconds: 10  # 发呆时间，即服务续约到期时间（缺省为90s）
   client:
-    healthcheck:
-      enabled: true                           # 开启健康检查（依赖spring-boot-starter-actuator）
     serviceUrl:
-      defaultZone: http://user:password123@localhost:8761/eureka/    #写在bootstrap里面，否则报错找不到server
-logging:
-  level: info
+      defaultZone: http://user:password123@localhost:8761/eureka/
+management:
+  security:
+    enabled: false

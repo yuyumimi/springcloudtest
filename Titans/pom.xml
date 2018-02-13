@@ -13,11 +13,14 @@
 
 	
     <modules>
-        <module>Uranus</module>
-        <module>Gaia</module>
+        <module>Uranus</module> <!-- api网关 -->
+        <module>Gaia</module>  <!-- 注册中心 -->
         <module>mobile-message-service</module>
         <module>Oceanus</module>
         <module>Tethys</module>
+        <module>microservice-simple-provider-user-trace-elk</module>
+        <module>Cronus</module>
+        <module>web-front-end</module>
     </modules>
 
     <properties>
@@ -71,10 +74,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+		<!--</dependency>-->
 	</dependencies>
     <build>
         <pluginManagement>
@@ -101,7 +104,7 @@
                         <webappDirectory>webContent</webappDirectory>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                         <packagingExcludes>
-                            WEB-INF/lib/spring-2.5.**.jar,
+                            WEB-INF/lib/spring-2.5.**.jar
                         </packagingExcludes>
                     </configuration>
                 </plugin>
@@ -139,6 +142,21 @@
 				  </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

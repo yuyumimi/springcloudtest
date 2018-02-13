@@ -6,23 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Cronus" />
         <module name="Gaia" />
+        <module name="microservice-simple-provider-user-trace-elk" />
         <module name="mobile-message-service" />
         <module name="Oceanus" />
+        <module name="testSession" />
         <module name="Tethys" />
         <module name="Uranus" />
         <module name="uranus" />
+        <module name="web-front-end" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
+      <module name="Cronus" target="1.8" />
       <module name="Gaia" target="1.8" />
+      <module name="microservice-simple-provider-user-trace-elk" target="1.8" />
       <module name="mobile-message-service" target="1.8" />
       <module name="Oceanus" target="1.8" />
       <module name="Tethys" target="1.8" />
       <module name="Titans" target="1.8" />
-      <module name="titans" target="1.8" />
-      <module name="uranus" target="1.8" />
       <module name="Uranus" target="1.8" />
+      <module name="web-front-end" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

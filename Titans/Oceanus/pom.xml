@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>Oceanus</artifactId>
     <packaging>jar</packaging>
-    <name>Oceanus-</name>
+    <name>Oceanus-sleuth</name>
 
     <parent>
         <artifactId>titans</artifactId>

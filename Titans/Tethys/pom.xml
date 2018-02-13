@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>Tethys</artifactId>
     <packaging>jar</packaging>
-    <name>Tethys</name>
+    <name>Tethys-zipkin</name>
 
     <dependencies>
         <dependency>

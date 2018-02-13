@@ -1,0 +1,41 @@
+server:
+  port: 9900
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）生产环境最好使用默认值
+    lease-expiration-duration-in-seconds: 10  # 发呆时间，即服务续约到期时间（缺省为90s）
+    prefer-ip-address: true                   # 显示ip
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+    healthcheck:
+      enabled: true                           # 开启健康检查（依赖spring-boot-starter-actuator）
+spring:
+  application:
+    name: Cronus-config-service-V1
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/YuYuMiaoMiao/springcloud-config      # 配置Git仓库的地址
+          search-paths: '{application}'                         #{application}客户端的spring.application.name来动态搜索配置目录
+          default-label: master
+          username:                                                         # Git仓库的账号
+          password:                                                         # Git仓库的密码
+    bus:
+      trace:
+        enabled: true     # 开启cloud bus的跟踪
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false
+endpoints:
+  shutdown:
+    enabled: false
+logging:
+  level:
+    root: warn

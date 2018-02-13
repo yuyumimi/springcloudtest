@@ -2,10 +2,13 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cronus" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gaia" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Oceanus" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tethys" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Uranus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-simple-provider-user-trace-elk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mobile-message-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-front-end" charset="UTF-8" />
   </component>
 </project>
