@@ -2,6 +2,7 @@ zuul:
   ignored-services: '*'                         #屏蔽配置的服务，只代理routes配置的服务或者配置多个服务名称，用，隔开
   routes:
     mobileMsgService-V1: /api/V1/mobileMsgService/**                       #把service-test名称映射为/API
+    web-front-end-V1: /api/V1/web-front-end/**
   #disable PreRequestLogFilter过滤器
   PreRequestLogFilter:
     pre:

@@ -21,6 +21,7 @@
         <module>microservice-simple-provider-user-trace-elk</module>
         <module>Cronus</module>
         <module>web-front-end</module>
+        <module>searchmanageV1</module>
     </modules>
 
     <properties>

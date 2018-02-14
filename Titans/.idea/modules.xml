@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Uranus/Uranus.iml" filepath="$PROJECT_DIR$/Uranus/Uranus.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" filepath="$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" filepath="$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/searchmanageV1/searchmanageV1.iml" filepath="$PROJECT_DIR$/searchmanageV1/searchmanageV1.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-front-end/web-front-end.iml" filepath="$PROJECT_DIR$/web-front-end/web-front-end.iml" />
     </modules>
   </component>

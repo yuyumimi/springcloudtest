@@ -11,6 +11,7 @@
         <module name="microservice-simple-provider-user-trace-elk" />
         <module name="mobile-message-service" />
         <module name="Oceanus" />
+        <module name="searchmanageV1" />
         <module name="testSession" />
         <module name="Tethys" />
         <module name="Uranus" />
@@ -24,6 +25,7 @@
       <module name="microservice-simple-provider-user-trace-elk" target="1.8" />
       <module name="mobile-message-service" target="1.8" />
       <module name="Oceanus" target="1.8" />
+      <module name="searchmanageV1" target="1.8" />
       <module name="Tethys" target="1.8" />
       <module name="Titans" target="1.8" />
       <module name="Uranus" target="1.8" />
