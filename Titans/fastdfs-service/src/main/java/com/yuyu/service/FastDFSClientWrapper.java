@@ -2,7 +2,10 @@ package com.yuyu.service;
 
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
+import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
+import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.github.tobato.fastdfs.service.GenerateStorageClient;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -12,6 +15,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
@@ -28,6 +33,8 @@ public class FastDFSClientWrapper {
 
     @Autowired
     private FastFileStorageClient storageClient;
+    ;
+
 
 
     /**
@@ -53,6 +60,20 @@ public class FastDFSClientWrapper {
         StorePath storePath = storageClient.uploadFile(stream,buff.length, fileExtension,null);
         return getResAccessUrl(storePath);
     }
+
+    public void download(){
+        byte[] group1s = storageClient.downloadFile("group1", "M00/00/00/wKgkhFqdTSiABHeWAAB_ONaYelc050.png", new DownloadByteArray());
+        File f = new File("D:\\123.png");
+
+        try {
+            FileOutputStream fout = new FileOutputStream(f);
+            fout.write(group1s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     // 封装图片完整URL地址
     private String getResAccessUrl(StorePath storePath) {

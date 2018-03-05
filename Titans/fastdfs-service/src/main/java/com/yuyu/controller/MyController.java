@@ -25,4 +25,13 @@ public class MyController {
         return "success";
 
     }
+    @RequestMapping(value = "/down", method = RequestMethod.POST)
+    public String down(String file) throws Exception {
+        // 省略业务逻辑代码。。。
+        dfsClient.download();
+        // 。。。。
+        return "success";
+
+    }
+
 }
