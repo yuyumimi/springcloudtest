@@ -22,6 +22,7 @@
         <module>Cronus</module>
         <module>web-front-end</module>
         <module>searchmanageV1</module>
+        <module>fastdfs-service</module>
     </modules>
 
     <properties>
@@ -128,7 +129,7 @@
 					<artifactId>docker-maven-plugin</artifactId>
 					<version>0.4.14</version>
 					<configuration>
-					  <imageName>itmuch/${project.artifactId}:${project.version}</imageName>
+					  <imageName>yuyu/${project.artifactId}:${project.version}</imageName>
 					  <forceTags>true</forceTags>
 					  <baseImage>java</baseImage>
 					  <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>

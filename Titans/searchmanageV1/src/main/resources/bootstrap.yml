@@ -6,9 +6,9 @@ spring:
     password: guest
   cloud:
     config:
-      profile: basic,druid,oracle,thyeleaf
+      profile: basic,druid,oracle
       label: master
-      name: web-front-end-V1
+      name: search-manage-V1
       discovery:
         enabled: true
         service-id: Cronus-config-service-V1

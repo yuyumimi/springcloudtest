@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Tethys/Tethys.iml" filepath="$PROJECT_DIR$/Tethys/Tethys.iml" />
       <module fileurl="file://$PROJECT_DIR$/Titans.iml" filepath="$PROJECT_DIR$/Titans.iml" />
       <module fileurl="file://$PROJECT_DIR$/Uranus/Uranus.iml" filepath="$PROJECT_DIR$/Uranus/Uranus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastdfs-service/fastdfs-service.iml" filepath="$PROJECT_DIR$/fastdfs-service/fastdfs-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" filepath="$PROJECT_DIR$/microservice-simple-provider-user-trace-elk/microservice-simple-provider-user-trace-elk.iml" />
       <module fileurl="file://$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" filepath="$PROJECT_DIR$/mobile-message-service/mobile-message-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/searchmanageV1/searchmanageV1.iml" filepath="$PROJECT_DIR$/searchmanageV1/searchmanageV1.iml" />

@@ -17,7 +17,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/YuYuMiaoMiao/springcloud-config      # 配置Git仓库的地址
+          uri: https://gitee.com/YuYuMiaoMiao/springcloud-config  # 配置Git仓库的地址http://192.168.29.130/root/springcloud-config.git
           search-paths: '{application}'                         #{application}客户端的spring.application.name来动态搜索配置目录
           default-label: master
           username:                                                         # Git仓库的账号

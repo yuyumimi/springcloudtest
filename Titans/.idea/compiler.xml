@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Cronus" />
+        <module name="fastdfs-service" />
         <module name="Gaia" />
         <module name="microservice-simple-provider-user-trace-elk" />
         <module name="mobile-message-service" />
@@ -21,6 +22,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="Cronus" target="1.8" />
+      <module name="fastdfs-service" target="1.8" />
       <module name="Gaia" target="1.8" />
       <module name="microservice-simple-provider-user-trace-elk" target="1.8" />
       <module name="mobile-message-service" target="1.8" />

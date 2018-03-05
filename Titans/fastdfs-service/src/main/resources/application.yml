@@ -1,0 +1,9 @@
+server:
+  port: 8000
+fdfs:
+  connect-timeout: 600
+  so-timeout: 1500
+  thumbImage:
+    height: 150
+    width: 150
+  tracker-list: 192.168.29.131:22122
