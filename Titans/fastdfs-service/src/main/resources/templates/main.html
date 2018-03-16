@@ -1,0 +1,117 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>北京市社会保险网上服务平台</title>
+    <link th:href="@{css/base.css}" rel="stylesheet"/>
+    <link th:href="@{css/main.css}" rel="stylesheet"/>
+</head>
+<body>
+<body>
+<div id="header">
+    <a href="#" class="logo">
+        <img th:src="@{images/logo.png}">
+        北京市社会保险网上服务平台
+    </a>
+    <p>	<input type="hidden" name="isFirstLogin" id="isFirstLogin" value="${isFirstLogin}"/>
+        <a href="javascript:;" class="user">用户：<span th:text="${user}" style="color">Special offer!</span>您好！</a>
+        <a href="javascript:;" class="message">使用须知</a>
+        <a href="#" class="home">返回首页</a>
+        <a th:href="@{/logout}" class="exit">退出</a>
+    </p>
+</div>
+<div id="wrap">
+    <ul class="nav">
+        <li><a th:href="@{/report/cut/toCut}">
+            <div>
+                <img th:src="@{images/navbj_1.png}">
+                <div>
+                    <img th:src="@{images/nav_1.png}">
+                </div>
+            </div>
+            <span>申报业务管理</span>
+        </a></li>
+        <li class="disable">
+            <a href="#">
+                <div>
+                    <img th:src="@{images/navbj_2.png}">
+                    <div>
+                        <img th:src="@{images/nav_2.png}">
+                    </div>
+                </div>
+                <span>个人权益记录</span>
+            </a>
+            <div><img th:src="@{images/navdis_2.png}"></div>
+        </li>
+        <li><a th:href="@{/toList}">
+            <div>
+                <img th:src="@{images/navbj_3.png}">
+                <div>
+                    <img th:src="@{images/nav_3.png}">
+                </div>
+            </div>
+            <span>文件管理</span>
+        </a></li>
+        <li><a th:href="@{/toList}">
+            <div>
+                <img th:src="@{images/navbj_4.png}">
+                <div>
+                    <img th:src="@{images/nav_4.png}">
+                </div>
+            </div>
+            <span>用户管理</span>
+        </a></li>
+        <li class="disable">
+            <a href="#">
+                <div>
+                    <img th:src="@{images/navbj_5.png}">
+                    <div>
+                        <img th:src="@{images/nav_5.png}">
+                    </div>
+                </div>
+                <span>业务报表查询</span>
+            </a>
+            <div><img th:src="@{images/navdis_5.png}"></div>
+        </li>
+    </ul>
+    <div class="quick">
+        <h2 class="title1">快捷入口</h2>
+        <ul>
+            <li><a th:href="@{/report/newInsured/newInsuredList}">
+                <div class="quick1"><img th:src="@{images/entrance1.png}"></div>
+                <p>新参保</p>
+            </a></li>
+            <li><a th:href="@{/report/cut/toCut}">
+                <div class="quick1"><img th:src="@{images/entrance1.png}"></div>
+                <p>普通减员</p>
+            </a></li>
+            <li><a href="@{/report/hospitalInfoChange/redirect/tohosital}">
+                <div class="quick2"><img th:src="@{images/entrance2.png}"></div>
+                <p>定点医疗机构变更</p>
+            </a></li>
+            <li><a th:href="@{reportInfoSearch.jsp}">
+                <div class="quick3"><img th:src="@{images/entrance3.png}"></div>
+                <p>申报信息状态查询</p>
+            </a></li><!-- class="disable" -->
+
+            <li class="add"><a href="javascript:;">
+                <img th:src="@{images/add.png}" class="a">
+                <img th:src="@{images/add_hover.png}" class="b">
+                <p>自定义</p>
+            </a></li>
+        </ul>
+    </div>
+    <div class="end">
+
+        <div class="tishi">
+            <h2 class="title1">温馨提示</h2>
+            <p>    如果您曾经通过网上服务平台办理过社会保险经办业务，相关的历史数据将会在近期的程序升级中为您提供。</p>
+        </div>
+    </div>
+</div>
+<script th:src="@{js/jquery-1.11.3.min.js}" type="text/javascript"></script>
+<script th:src="@{js/base.js}" type="text/javascript"></script>
+<script th:src="@{js/ajaxutil.js}" type="text/javascript"></script>
+<script th:src="@{js/main.js}" type="text/javascript"></script>
+
+</body>
+</html>

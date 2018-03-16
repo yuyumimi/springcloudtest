@@ -1,5 +1,7 @@
 package com.yuyu.service;
 
+import com.github.tobato.fastdfs.conn.FdfsWebServer;
+import com.github.tobato.fastdfs.domain.MateData;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
 import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
@@ -19,6 +21,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.Set;
 
 /**
  * <p>Description: FastDFS文件上传下载包装类</p>
@@ -34,7 +37,8 @@ public class FastDFSClientWrapper {
     @Autowired
     private FastFileStorageClient storageClient;
     ;
-
+    @Autowired
+    private FdfsWebServer fdfsWebServer;
 
 
     /**
@@ -61,24 +65,8 @@ public class FastDFSClientWrapper {
         return getResAccessUrl(storePath);
     }
 
-    public void download(){
-        byte[] group1s = storageClient.downloadFile("group1", "M00/00/00/wKgkhFqdTSiABHeWAAB_ONaYelc050.png", new DownloadByteArray());
-        File f = new File("D:\\123.png");
-
-        try {
-            FileOutputStream fout = new FileOutputStream(f);
-            fout.write(group1s);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-    // 封装图片完整URL地址
-    private String getResAccessUrl(StorePath storePath) {
-        String fileUrl = "http://192.168.29.131:8888" +  "/" + storePath.getFullPath();
-        return fileUrl;
+    public byte[] download(String groupName, String remoteFileName){
+        return storageClient.downloadFile(groupName, remoteFileName, new DownloadByteArray());
     }
 
     /**
@@ -96,5 +84,22 @@ public class FastDFSClientWrapper {
         } catch (FdfsUnsupportStorePathException e) {
             logger.warn(e.getMessage());
         }
+    }
+
+    public String upfileImage(MultipartFile file,long size,String fileExtName,Set<MateData> metaData){
+        StorePath path = null;
+        try {
+            path = storageClient.uploadImageAndCrtThumbImage(file.getInputStream(),size,fileExtName,metaData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return getResAccessUrl(path);
+    }
+
+    // 封装图片完整URL地址
+    private String getResAccessUrl(StorePath storePath) {
+        String fileUrl = fdfsWebServer.getWebServerUrl() + storePath.getFullPath();
+        return fileUrl;
     }
 }

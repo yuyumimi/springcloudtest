@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:oracle:thin:@172.20.65.236:1521:bjrac
+      username: sior
+      password: sior
+      filter: stat, wall, log4j
+      stat-view-servlet:
+        enabled: true
+        login-username: druid
+        login-password: druid
+      driver-class-name: oracle.jdbc.OracleDriver

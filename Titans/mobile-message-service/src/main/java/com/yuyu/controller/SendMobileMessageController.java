@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.xml.namespace.QName;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RefreshScope
@@ -69,5 +68,26 @@ public class SendMobileMessageController {
         }
         LOGGER.info("手机平台返回:"+xmlString);
         return xmlString;
+    }
+
+    @RequestMapping(value = "/test")
+    public void test(){
+        final Calendar c=Calendar.getInstance();
+        c.set(Calendar.DAY_OF_MONTH,12);
+        c.set(Calendar.HOUR, 00);
+        c.set(Calendar.MINUTE, 0);
+        c.set(Calendar.SECOND, 0);
+        System.out.println(c.getTime());
+        Timer t=new Timer();
+        t.schedule(new TimerTask() {
+
+            @Override
+            public void run() {
+                System.out.println(new Date());
+                sendMsg("15011505642","咩咩！！！","telServicePublic");
+                System.out.println(c.getTime());
+                System.exit(0);
+            }
+        }, c.getTime());;
     }
 }
